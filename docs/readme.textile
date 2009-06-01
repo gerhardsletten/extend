@@ -1,0 +1,3 @@
+h1. Extend plugin
+
+Collection of helpers, behaviors and components I use. Living in a plugin makes it possible to reuse them on different project and keep them in Subversion.
