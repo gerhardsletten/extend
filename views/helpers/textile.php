@@ -10,7 +10,7 @@
  * @license 	http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-App::import('Vendor', 'Textile', array('file' => 'Textile'.DS.'classTextile.php'));
+App::import('Vendor', 'Extend.Textile', array('file' => 'Textile'.DS.'classTextile.php'));
 
 /**
  * Textile Helper class

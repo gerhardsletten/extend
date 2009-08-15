@@ -18,6 +18,10 @@ class GershImageHelper extends AppHelper {
  * @access public
  */
 	function resize($path, $image_class, $htmlAttributes = array(), $aspect = true, $return = false) {
+		$this->_fix_path($path);
+		if($image_class == 'original') {
+			return $this->Html->image($path, $htmlAttributes);
+		}
 		$img_settings = Configure::read('Image');
 		if($img_settings[$image_class]['width'] != '' and $img_settings[$image_class]['height'] != '') {
 			$width = $img_settings[$image_class]['width'];
@@ -27,7 +31,7 @@ class GershImageHelper extends AppHelper {
 			$height = 200;
 		}
 		// Gersh: remove 'img/' 
-		$this->_fix_path($path);
+		
 		
 		$types = array(1 => "gif", "jpeg", "png", "swf", "psd", "wbmp"); // used to determine image type
 		
