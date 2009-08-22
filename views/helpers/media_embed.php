@@ -36,8 +36,8 @@
 					$align = 0;
 				}
 				$key = 'embed_image' . $matches[1] . "_" . $matches[2] . "_" . $lightbox . "_" . $align;
-				//+1 day
-				return $view->element('fetch_attachment', array('plugin'=>'extend', 'cache'=> array('key' => $key, 'time' => '0'), 'id'=>$matches[1], 'size'=>$matches[2], 'show_lightbox'=>$lightbox,'align'=>$align), true);
+				//
+				return $view->element('fetch_attachment', array('plugin'=>'extend', 'cache'=> array('key' => $key, 'time' => '+1 day'), 'id'=>$matches[1], 'size'=>$matches[2], 'show_lightbox'=>$lightbox,'align'=>$align), true);
 				
 				
 			} else {
